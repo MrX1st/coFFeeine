@@ -33,7 +33,7 @@ if (isset($_GET['logout'])) {
         <li><a href="/Proj/Proj/index.php">Home</a></li>
         <li><a href="/Proj/Proj/courses.php">Courses</a></li>
         <li><a href="/Proj/Proj/shop.php">Shop</a></li>
-        <li><a href="/Proj/Proj/dashboard.php">Dashboard</a></li>
+        <!-- <li><a href="/Proj/Proj/dashboard.php">Dashboard</a></li> -->
         <li><a href="/Proj/Proj/contact.php">Contact</a></li>
       </ul>
       <div class="buttons">

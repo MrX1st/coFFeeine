@@ -123,7 +123,7 @@
                     <div class="profile-img-box">
                         <img src="/Proj/Proj/images/pexels-ali-pazani-2613260.jpg" alt="">
                     </div>
-                    <h2 class="name">Madonna Miks</h2>
+                    <h2 class="name">Joe Blake</h2>
                     <p>Barista</p>
                     <div class="course discount card-1 d-flex">
                         <div>

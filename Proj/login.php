@@ -24,36 +24,42 @@ if (isset($_SESSION['user_id'])) {
 }
 
 // Login a user
-if (isset($_POST['username'])) {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+if (isset($_POST['username'])) { 
+  $username = $_POST['username']; 
+  $password = $_POST['password']; 
 
-    // Perform some basic validation on the input
-    if (empty($username) || empty($password)) {
-        echo 'Please fill in all the fields.';
-    } else {
-        // Check if the username and password match
-        $query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
-        $result = $connection->query($query);
+  // Perform some basic validation on the input 
+  if (empty($username) || empty($password)) { 
+      echo 'Please fill in all the fields.'; 
+  } else { 
+      // Check if the username and password match 
+      $query = "SELECT * FROM users WHERE username=? AND password=?";
+      $stmt = $connection->prepare($query);
+      $stmt->bind_param("ss", $username, $password);
+      $stmt->execute();
+      $result = $stmt->get_result();
 
-        if (isset($result->num_rows) == 1) {
-            // Fetch the user ID
-            $row = $result->fetch_assoc();
-            $user_id = $row['id'];
+      if ($result) { 
+          if ($result->num_rows == 1) { 
+              // Fetch the user ID 
+              $row = $result->fetch_assoc(); 
+              $user_id = $row['id']; 
 
-            // Set session variables
-            $_SESSION['user_id'] = $user_id;
-            $_SESSION['username'] = $username;
+              // Set session variables 
+              $_SESSION['user_id'] = $user_id; 
+              $_SESSION['username'] = $username; 
 
-            // Redirect to a welcome page or any other protected page
-            header('Location: index.php');
-            exit();
-        } else {
-            echo 'Invalid username or password.';
-        }
-    }
+              // Redirect to a welcome page or any other protected page 
+              header('Location: index.php'); 
+              exit(); 
+          } else { 
+              echo 'Invalid username or password.'; 
+          } 
+      } else {
+          echo "Error executing the query: " . $connection->error;
+      }
+  } 
 }
-
 // Logout the user
 if (isset($_GET['logout'])) {
     // Clear all session variables

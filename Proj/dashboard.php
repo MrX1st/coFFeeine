@@ -121,7 +121,7 @@
             <section class="secondary-container ">
                 <div class="profile d-flex">
                     <div class="profile-img-box">
-                        <img src="/Proj/Proj/images/pexels-ali-pazani-2613260.jpg" alt="">
+                        <img src="/Proj/Proj/images/user.jpg" alt="">
                     </div>
                     <h2 class="name">Joe Blake</h2>
                     <p>Barista</p>

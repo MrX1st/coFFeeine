@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" /> <!-- https://fonts.google.com/ -->
     <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="images/icon.png" type="image/png">
 
 </head>
 <body>

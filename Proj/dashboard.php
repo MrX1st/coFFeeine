@@ -8,6 +8,8 @@
     <!-- Remix icons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles-dash.css">
+    <link rel="icon" href="images/icon.png" type="image/png">
+
     <title>Dashboard</title>
 </head>
 
